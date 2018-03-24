@@ -9,20 +9,20 @@ import com.amazonaws.services.sns.AmazonSNS;
 import com.amazonaws.services.sns.AmazonSNSClientBuilder;
 import com.amazonaws.services.sns.model.PublishRequest;
 
-public class LambdaFunctionHandler implements RequestHandler<DynamodbEvent, String> {
+/*public class LambdaFunctionHandler implements RequestHandler<DynamodbEvent, String> {
 
     private AmazonSNS SNS_CLIENT = AmazonSNSClientBuilder.standard().withRegion(Regions.US_WEST_2).build();
     private static String RESTRAUNTS_SNS_TOPIC = "arn:aws:sns:us-west-2:243824163312:Restraunt";
 
     //@Override
-    /*public String handleRequest1(DynamodbEvent input, Context context){
+    *//*public String handleRequest1(DynamodbEvent input, Context context){
         String inputString = String.valueOf(input);
         context.getLogger().log("input :" +input);
         String output = "Hello" + inputString + "|";
         String outputBody = output + "A new res opened";
         sendEmailNotification(output,outputBody);
         return output;
-    }*/
+    }*//*
 
     @Override
     public String handleRequest(DynamodbEvent input, Context context){
@@ -68,4 +68,4 @@ public class LambdaFunctionHandler implements RequestHandler<DynamodbEvent, Stri
         // JSON Parser logic
         return resturantLocation;
     }
-}
+}*/
